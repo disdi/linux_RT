@@ -5,8 +5,7 @@ title: Architecture
 Architecture
 ============
 
-Scheduling messages on a peripheral bus like Controller Area Network (CAN) is analogous to scheduling tasks by fixed priorities. 
-We therefore take a brief detour into communication inside a SOC for transactions happening with a single processor.
+Scheduling messages on a peripheral bus like Controller Area Network (CAN) is analogous to scheduling tasks by fixed priorities. We therefore take a brief detour into communication inside a SOC for transactions happening with a single processor.
 
 ## Sequence Diagram for transactions inside a SOC
 

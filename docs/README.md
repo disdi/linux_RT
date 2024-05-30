@@ -1,5 +1,5 @@
-Real Time additions to VexRiscv Core 
-====================================
+Real Time extensions to Litex 
+=============================
 
 A real-time processor core is a specialized microprocessor designed to handle real-time computing tasks where timing constraints are critical. These tasks require the processor to deliver results within a specified time frame, making them essential in systems where timely execution is crucial, such as in automotive control systems, industrial automation, medical devices, and telecommunications.
 

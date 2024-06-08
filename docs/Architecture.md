@@ -30,4 +30,4 @@ Scheduling messages on a peripheral bus like Controller Area Network (CAN) is an
 
 ## Proposed Plan
 
-Detailed roadmap for the proposal can be found at [Roadmap](Roadmap).
+Detailed roadmap for the proposal can be found at [Roadmap](./Roadmap.md).

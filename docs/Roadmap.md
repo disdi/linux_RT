@@ -12,11 +12,10 @@ Adding an extension to the RISC-V architecture involves several steps, from defi
 | Steps                             | Status           | Remark      |
 |-----------------------------------|------------------|-------------|
 | Define the Extension Specification|Already Implemented|[Specification](https://github.com/riscv/riscv-fast-interrupt) by RISC-V Community|
-| Proposal and Review               |Already Implemented|CLIC ratification status is now tracked using [Jira](https://jira.riscv.org/browse/RVS-1017)|
-| Toolchain Support                 |Already Implemented|Already supported by [GCC](https://jira.riscv.org/browse/RVS-2508)|
-| Simulator / Emulator Support      |Already Implemented|Already supported by [RISC-V Architectural Tests](https://jira.riscv.org/browse/RVS-2506)|
-| Hardware Implementation           |Not Implemented|No support in Vexriscv. Reference implementation in [pulp-platform](https://github.com/pulp-platform/clic)|
-| SOwtware Implementation           |Not Implemented|No support in Vexriscv. Reference implementation in [QEMU](https://lists.gnu.org/archive/html/qemu-riscv/2021-04/msg00221.html)|
+| Proposal and Review               |Already Implemented|CLIC ratification status is now tracked using [Jira](https://lf-riscv.atlassian.net/browse/RVS-1017)|
+| Toolchain Support                 |Already Implemented|Already supported by [GCC](https://lf-riscv.atlassian.net/browse/RVS-2508)|
+| Hardware Implementation           |Not Implemented|No support in Vexriscv. [Commercial implementation](https://lf-riscv.atlassian.net/browse/RVS-2513). [Opensource implementation](https://github.com/pulp-platform/clic)|
+| Software Implementation           |Not Implemented|No support in Vexriscv. Reference implementation in [QEMU](https://mail.gnu.org/archive/html/qemu-devel/2024-08/msg02791.html)|
 | Compliance and Testing            |Not Implemented|No support in Vexriscv. Reference tests in [Safety Island](https://github.com/pulp-platform/safety_island/tree/main/sw/tests)|
 | Documentation and Release         |Not Implemented|No support in Vexriscv.|
 
@@ -28,7 +27,7 @@ Adding an extension to the RISC-V architecture involves several steps, from defi
 - Integrate the Interrupt 
     - Select the CLIC Interrupt Controller: first step is to integrate CLIC it with Vexriscv core.
 - Modify the Vexriscv Core
-    - Interface Design: Ensure the CLIC interrupt controller's interface is compatible with Vexriscv core's interrupt handling mechanism. This typically involves      connections for interrupt request lines and acknowledge signals.
+    - Interface Design: Ensure the CLIC interrupt controller's interface is compatible with Vexriscv core's interrupt handling mechanism. This typically involves connections for interrupt request lines and acknowledge signals.
 
 ### Milestone 2 - Software Modifications
 

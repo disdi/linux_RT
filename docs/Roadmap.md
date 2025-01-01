@@ -25,20 +25,30 @@ Adding an extension to the RISC-V architecture involves several steps, from defi
 
 ### Milestone 1 - Hardware Modifications
 
-- Integrate the Interrupt 
-    - Select the CLIC Interrupt Controller: first step is to integrate CLIC it with Vexriscv core.
-- Modify the Vexriscv Core
-    - Interface Design: Ensure the CLIC interrupt controller's interface is compatible with Vexriscv core's interrupt handling mechanism. This typically involves connections for interrupt request lines and acknowledge signals.
+- Implement the CLIC Interrupt Controller
+    - Integrate CLIC with any simple RISC-V SOC.
+        - Integrate reference CLIC Implementation to trigger RISC-V Core into Trap.
+    - Integrate CLIC in Litex
+        - Implement CLIC in SpinalHDL to trigger Vexriscv Core into Trap.
 
 ### Milestone 2 - Software Modifications
 
-- RISC-V Machine (M-Mode) & Supervisor (S-Mode) Software
-    -  Trap Vector Initialization: Update the trap vector initialization code to handle interrupts from the new interrupt controller.
-    -  Interrupt Handling Code: Modify the interrupt service routines (ISRs) to acknowledge and service interrupts from the new controller.
-    -  Device Tree (DT): Update the device tree to include entries for the new interrupt controller.
-    -  Interrupt Controller Driver: Write or modify an existing driver to interface with the new interrupt controller.  
+- RISC-V Bare Metal Software
+    -  Interrupt Vector Implementation:
+        - Update the trap vector initialization code to handle interrupts from CLIC.
+        - Modify Interrupt vector table to switch to CLIC as interrupt controller.
+        - Write Interrupt Controller Driver to interface with the new interrupt controller.
+        - Modify interrupt service routines (ISRs) to acknowledge and service interrupts from CLIC.
+    - Verify CLIC interrupts work on bare-metal application booting on RISC-V Core.
 
-### Milestone 3 - Verification and Testing
+### Milestone 3 - Software Modifications
+
+- RISC-V Linux Software
+    -  Device Tree (DT): Update the device tree to include entries for the new interrupt controller.
+    -  Interrupt Controller Driver: Write Linux driver to interface with the new interrupt controller.
+     - Verify CLIC interrupts work on Risc-V Core in Litex booting Linux.
+
+### Milestone 4 - Verification and Testing
 
 - Simulation: Run simulations to verify the integration of CLIC interrupt controller with the RISC-V core. Check that interrupts are correctly triggered, handled, and acknowledged.
 - Hardware Testing: Once simulations are successful, perform hardware testing to ensure the entire system with Litex framework to ensure working correctly in a real-world scenario.

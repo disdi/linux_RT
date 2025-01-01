@@ -11,13 +11,14 @@ Adding an extension to the RISC-V architecture involves several steps, from defi
 
 | Steps                             | Status           | Remark      |
 |-----------------------------------|------------------|-------------|
-| Define the Extension Specification|Already Implemented|[Specification](https://github.com/riscv/riscv-fast-interrupt) by RISC-V Community|
-| Proposal and Review               |Already Implemented|CLIC ratification status is now tracked using [Jira](https://lf-riscv.atlassian.net/browse/RVS-1017)|
-| Toolchain Support                 |Already Implemented|Already supported by [GCC](https://lf-riscv.atlassian.net/browse/RVS-2508)|
-| Hardware Implementation           |Not Implemented|No support in Vexriscv. [Commercial implementation](https://lf-riscv.atlassian.net/browse/RVS-2513). [Opensource implementation](https://github.com/pulp-platform/clic)|
-| Software Implementation           |Not Implemented|No support in Vexriscv. Reference implementation in [QEMU](https://mail.gnu.org/archive/html/qemu-devel/2024-08/msg02791.html)|
-| Compliance and Testing            |Not Implemented|No support in Vexriscv. Reference tests in [Safety Island](https://github.com/pulp-platform/safety_island/tree/main/sw/tests)|
-| Documentation and Release         |Not Implemented|No support in Vexriscv.|
+| Define the Extension Specification|Already Implemented|[Specification](https://github.com/riscv/riscv-fast-interrupt) by RISC-V Community.|
+| Proposal and Review               |Already Implemented|CLIC ratification status ticket [Jira](https://lf-riscv.atlassian.net/browse/RVS-1017).|
+| Simulation Support                |Already Implemented|Already supported by [RISC-V ACT](https://lf-riscv.atlassian.net/browse/RVS-2506).|
+| Emulator Support                  |Already Implemented|Initial patches in [QEMU](https://mail.gnu.org/archive/html/qemu-devel/2024-08/msg02791.html).|
+| Hardware Implementation           |Not Implemented|No Vexriscv support. [Commercial](https://lf-riscv.atlassian.net/browse/RVS-2513) & [Opensource](https://github.com/pulp-platform/clic) reference.|
+| Software Implementation           |Not Implemented|No Vexriscv support. [Opensource](https://github.com/pulp-platform/pulp-freertos/blob/master/drivers/clic.c) reference.|
+| Compliance and Testing            |Not Implemented|No Vexriscv support. Reference [tests](https://github.com/pulp-platform/safety_island/tree/main/sw/tests/runtime_clic_basic).|
+| Documentation and Release         |Not Implemented|No Vexriscv support.|
 
 
 ## CLIC Support in Vexriscv

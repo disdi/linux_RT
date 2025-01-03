@@ -25,30 +25,95 @@ Adding an extension to the RISC-V architecture involves several steps, from defi
 
 ### Milestone 1 - Hardware Modifications
 
-- Implement the CLIC Interrupt Controller
-    - Integrate CLIC with any simple RISC-V SOC.
-        - Integrate reference CLIC Implementation to trigger RISC-V Core into Trap.
-    - Integrate CLIC in Litex
-        - Implement CLIC in SpinalHDL to trigger Vexriscv Core into Trap.
+- Integrate CLIC with RISC-V Ibex SOC.
 
-### Milestone 2 - Software Modifications
+#### 1.1 Top-Level Integration
+- [ ] Create CLIC module instance in SoC top-level
+- [ ] Connect clock and reset signals
+- [ ] Define and connect interrupt input signals from peripherals
+- [ ] Connect CLIC-to-Ibex interface signals
 
-- RISC-V Bare Metal Software
-    -  Interrupt Vector Implementation:
-        - Update the trap vector initialization code to handle interrupts from CLIC.
-        - Modify Interrupt vector table to switch to CLIC as interrupt controller.
-        - Write Interrupt Controller Driver to interface with the new interrupt controller.
-        - Modify interrupt service routines (ISRs) to acknowledge and service interrupts from CLIC.
-    - Verify CLIC interrupts work on bare-metal application booting on RISC-V Core.
+#### 1.2 Memory Map Implementation
+- [ ] Define CLIC memory map (base address and regions)
+- [ ] Implement address decoder for CLIC registers
+- [ ] Connect to system bus (TileLink/AHB/AXI)
+- [ ] Map CLIC vector table in memory
 
-### Milestone 3 - Software Modifications
+#### 1.3 Register Implementation
+- [ ] Implement CLIC control registers
+- [ ] Implement per-interrupt configuration registers
+- [ ] Implement interrupt pending/enable registers
+- [ ] Implement level/priority registers
 
-- RISC-V Linux Software
-    -  Device Tree (DT): Update the device tree to include entries for the new interrupt controller.
-    -  Interrupt Controller Driver: Write Linux driver to interface with the new interrupt controller.
-     - Verify CLIC interrupts work on Risc-V Core in Litex booting Linux.
+#### 1.4 Interrupt Logic
+- [ ] Implement interrupt priority resolution
+- [ ] Implement level-based preemption logic
+- [ ] Implement selective hardware vectoring
+- [ ] Implement interrupt completion logic
+
+#### 1.5 Vector Table
+- [ ] Implement vector table storage
+- [ ] Implement vector table lookup logic
+- [ ] Connect vector addresses to Ibex core
+
+
+### Milestone 2 - Baremetal Software Modifications
+
+#### 2.1 Startup Handling
+- [ ] Update bootup code
+- [ ] Modify linker scripts
+- [ ] Create vector table setup functions
+- [ ] Update system initialization functions
+
+#### 2.2 Interrupt Handlers
+- [ ] Create default interrupt handler
+- [ ] Implement vectored interrupt handlers
+- [ ] Setup interrupt entry/exit code
+- [ ] Implement interrupt nesting support
+
+#### 2.3 Configuration
+- [ ] Define interrupt priority levels
+- [ ] Configure interrupt modes (vectored/non-vectored)
+- [ ] Setup privilege levels
+- [ ] Configure preemption thresholds
+
+#### 2.4 Driver Development
+- [ ] Create CLIC initialization function
+- [ ] Implement interrupt enable/disable functions
+- [ ] Implement interrupt priority setting functions
+- [ ] Create vector table setup functions
+
+#### 2.5 SDK update
+- [ ] Add CLIC support to build system
+- [ ] Add CLIC debugging support
+
+### Milestone 3 - Linux Software Modifications
+
+#### 3.1 Linux Device Tree Update 
+- [ ] Update the device tree to include entries for the new interrupt controller.
+
+#### 3.2 Linux Interrupt Controller Driver
+- [ ] Write Linux driver to interface with the new interrupt controller.
+    
+#### 3.2 Linux Startup Code    
+- [ ] CLIC interrupts initialize on Risc-V Core booting Linux.
 
 ### Milestone 4 - Verification and Testing
 
-- Simulation: Run simulations to verify the integration of CLIC interrupt controller with the RISC-V core. Check that interrupts are correctly triggered, handled, and acknowledged.
-- Hardware Testing: Once simulations are successful, perform hardware testing to ensure the entire system with Litex framework to ensure working correctly in a real-world scenario.
+#### 4.1 Compliance Testing
+- [ ] Verify RISC-V CLIC specification compliance
+- [ ] Test privilege level handling
+- [ ] Verify CSR functionality
+- [ ] Check timing requirements
+
+#### 4.2 System Validation
+- [ ] Validate system stability
+- [ ] Test corner cases
+- [ ] Verify error handling
+- [ ] Validate power modes
+
+#### 4.3 Performance Analysis
+- [ ] Measure interrupt latency
+- [ ] Analyze resource utilization
+- [ ] Profile interrupt handling
+- [ ] Document performance metrics

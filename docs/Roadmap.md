@@ -25,13 +25,13 @@ Adding an extension to the RISC-V architecture involves several steps, from defi
 
 ### Milestone 1 - Hardware Modifications
 
-- Integrate CLIC with RISC-V Ibex SOC.
+This milestone focuses on the hardware modifications needed for integrating the CLIC with the Vexriscv core.
 
 #### 1.1 Top-Level Integration
 - [ ] Create CLIC module instance in SoC top-level
 - [ ] Connect clock and reset signals
 - [ ] Define and connect interrupt input signals from peripherals
-- [ ] Connect CLIC-to-Ibex interface signals
+- [ ] Connect CLIC-to-Vexriscv interface signals
 
 #### 1.2 Memory Map Implementation
 - [ ] Define CLIC memory map (base address and regions)
@@ -54,10 +54,12 @@ Adding an extension to the RISC-V architecture involves several steps, from defi
 #### 1.5 Vector Table
 - [ ] Implement vector table storage
 - [ ] Implement vector table lookup logic
-- [ ] Connect vector addresses to Ibex core
+- [ ] Connect vector addresses to Vexriscv core
 
 
 ### Milestone 2 - Baremetal Software Modifications
+
+This milestone addresses the necessary software changes for supporting CLIC on baremetal systems.
 
 #### 2.1 Startup Handling
 - [ ] Update bootup code
@@ -89,16 +91,25 @@ Adding an extension to the RISC-V architecture involves several steps, from defi
 
 ### Milestone 3 - Linux Software Modifications
 
-#### 3.1 Linux Device Tree Update 
+This milestone focuses on the necessary software changes needed for CLIC in Linux.
+
+#### 3.1 Linux Kernel Configuration
 - [ ] Update the device tree to include entries for the new interrupt controller.
+- [ ] Update kernel configuration options to include support for the new interrupt controller.
 
 #### 3.2 Linux Interrupt Controller Driver
 - [ ] Write Linux driver to interface with the new interrupt controller.
+- [ ] Add support for interrupt prioritization and preemption.
+- [ ] Ensure compatibility with existing Linux kernel interrupt handling mechanisms.
     
-#### 3.2 Linux Startup Code    
-- [ ] CLIC interrupts initialize on Risc-V Core booting Linux.
+#### 3.3 Linux Startup Code
+- [ ] Initialize CLIC interrupts on RISC-V core booting Linux.
+- [ ] Ensure proper initialization of interrupt vectors.
+- [ ] Update the kernel boot parameters to recognize the new interrupt controller.
 
 ### Milestone 4 - Verification and Testing
+
+This milestone involves thorough verification and testing of the CLIC integration.
 
 #### 4.1 Compliance Testing
 - [ ] Verify RISC-V CLIC specification compliance

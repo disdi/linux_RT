@@ -27,11 +27,11 @@ Adding an extension to the RISC-V architecture involves several steps, from defi
 
 This milestone focuses on the hardware modifications needed for integrating the CLIC with the Vexriscv core.
 
-#### 1.1 Top-Level Integration
+#### 1.1 Top-Level Integration to Litex SOC
 - [ ] Create CLIC module instance in SoC top-level
 - [ ] Connect clock and reset signals
 - [ ] Define and connect interrupt input signals from peripherals
-- [ ] Connect CLIC-to-Vexriscv interface signals
+- [ ] Connect Vexriscv-to-CLIC configuration interface
 
 #### 1.2 Memory Map Implementation
 - [ ] Define CLIC memory map (base address and regions)
@@ -67,17 +67,17 @@ This milestone addresses the necessary software changes for supporting CLIC on b
 - [ ] Create vector table setup functions
 - [ ] Update system initialization functions
 
-#### 2.2 Interrupt Handlers
-- [ ] Create default interrupt handler
-- [ ] Implement vectored interrupt handlers
-- [ ] Setup interrupt entry/exit code
-- [ ] Implement interrupt nesting support
-
-#### 2.3 Configuration
+#### 2.2 Configuration
 - [ ] Define interrupt priority levels
 - [ ] Configure interrupt modes (vectored/non-vectored)
 - [ ] Setup privilege levels
 - [ ] Configure preemption thresholds
+
+#### 2.3 Interrupt Handlers
+- [ ] Create default interrupt handler
+- [ ] Implement vectored interrupt handlers
+- [ ] Setup interrupt entry/exit code
+- [ ] Implement interrupt nesting support
 
 #### 2.4 Driver Development
 - [ ] Create CLIC initialization function
@@ -85,7 +85,7 @@ This milestone addresses the necessary software changes for supporting CLIC on b
 - [ ] Implement interrupt priority setting functions
 - [ ] Create vector table setup functions
 
-#### 2.5 SDK update
+#### 2.5 Software Development Kit(SDK) update
 - [ ] Add CLIC support to build system
 - [ ] Add CLIC debugging support
 

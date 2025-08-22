@@ -17,7 +17,7 @@ For full documentation and milestones, see the [Project Blog](https://saketsinha
 | b. CLIC interrupt configuration | 100% |
 | c. CLIC interrupt handlers for Peripherals | 100% |
 | d. CLIC driver development | 100% |
-| e. CLIC Software Development Kit(SDK) update | 0% |
+| e. CLIC Software Development Kit(SDK) update | 100% |
 | **3. Linux Software Modifications** | |
 | a. Linux kernel configuration for CLIC | 0% |
 | b. Linux kernel interrupt Controller Driver for CLIC | 0% |

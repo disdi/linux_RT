@@ -1,0 +1,207 @@
+Project Directory Structure:
+├── Architecture.md
+├── Roadmap.md
+└── index.md
+
+
+File: 
+Architecture.md
+Content: 
+---
+title: Architecture
+---
+
+Architecture
+============
+
+Scheduling messages on a peripheral bus like Controller Area Network (CAN) is analogous to scheduling tasks by fixed priorities. We therefore take a brief detour into communication inside a SOC for transactions happening with a single processor.
+
+## Sequence Diagram for transactions inside a SOC
+
+![logo](./attachment/litex-sequence-daigram.png)
+
+
+- CPU Core initiates a read operation through the Bus Interconnect to the Memory.
+- Memory responds with the requested data back to the CPU Core through the Bus Interconnect.
+- CPU Core sends a command to a Peripheral.
+- Peripheral acknowledges the command back to the CPU Core.
+- Peripheral triggers an interrupt to the Interrupt Controller.
+- Interrupt Controller sends an interrupt signal to the CPU Core.
+
+
+## Modification to Litex for Real Time Systems
+
+ We propose to replace the interrupt controller for Vexriscv in Litex with an implementation of the RISC-V [CLIC](https://github.com/riscv/riscv-fast-interrupt/blob/master/clic.adoc) specifciation, which provides the core with key features such as prioritization by level and priority, selective hardware vectoring, and non-nested interrupt optimization (tail-chaining through the `xnxti` CSR) directly as RISC-V standard extension.
+
+## Proposed Plan
+
+Detailed roadmap for the proposal can be found at [Roadmap](./Roadmap.md).
+
+
+File: 
+Roadmap.md
+Content: 
+---
+title: Roadmap
+---
+
+Roadmap
+=======
+
+## CLIC Support in RISC-V Ecosystem 
+
+Adding an extension to the RISC-V architecture involves several steps, from defining the specification to implementing and testing the extension. Here's a high-level roadmap for the process:
+
+| Steps                             | Status           | Remark      |
+|-----------------------------------|------------------|-------------|
+| Define the Extension Specification|Already Implemented|[Specification](https://github.com/riscv/riscv-fast-interrupt) by RISC-V Community.|
+| Proposal and Review               |Already Implemented|CLIC ratification status ticket [Jira](https://lf-riscv.atlassian.net/browse/RVS-1017).|
+| Simulation Support                |Already Implemented|Already supported by [RISC-V ACT](https://lf-riscv.atlassian.net/browse/RVS-2506).|
+| Emulator Support                  |Already Implemented|Initial patches in [QEMU](https://mail.gnu.org/archive/html/qemu-devel/2024-08/msg02791.html).|
+| Hardware Implementation           |Not Implemented|No Vexriscv support. [Commercial](https://lf-riscv.atlassian.net/browse/RVS-2513) & [Opensource](https://github.com/pulp-platform/clic) reference.|
+| Software Implementation           |Not Implemented|No Vexriscv support. [Opensource](https://github.com/pulp-platform/pulp-freertos/blob/master/drivers/clic.c) reference.|
+| Compliance and Testing            |Not Implemented|No Vexriscv support. Reference [tests](https://github.com/pulp-platform/safety_island/tree/main/sw/tests/runtime_clic_basic).|
+| Documentation and Release         |Not Implemented|No Vexriscv support.|
+
+
+## CLIC Support in Vexriscv
+
+### Milestone 1 - Hardware Modifications
+
+This milestone focuses on the hardware modifications needed for integrating the CLIC with the Vexriscv core.
+
+#### 1.1 Top-Level Integration to Litex SOC
+- [x] Create CLIC module instance in SoC top-level
+- [x] Connect clock and reset signals
+- [x] Define and connect interrupt input signals from peripherals
+- [x] Connect Vexriscv-to-CLIC configuration interface
+
+#### 1.2 Memory Map Implementation
+- [x] Define CLIC memory map (base address and regions)
+- [x] Implement address decoder for CLIC registers
+- [x] Connect to system bus (TileLink/AHB/AXI)
+- [x] Map CLIC vector table in memory
+
+#### 1.3 Register Implementation
+- [x] Implement CLIC control registers
+- [x] Implement per-interrupt configuration registers
+- [x] Implement interrupt pending/enable registers
+- [x] Implement level/priority registers
+
+#### 1.4 Interrupt Logic
+- [x] Implement interrupt priority resolution
+- [x] Implement level-based preemption logic
+- [x] Implement selective hardware vectoring
+- [x] Implement interrupt completion logic
+
+#### 1.5 Vector Table
+- [x] Implement vector table storage
+- [x] Implement vector table lookup logic
+- [x] Connect vector addresses to Vexriscv core
+
+
+### Milestone 2 - Baremetal Software Modifications
+
+This milestone addresses the necessary software changes for supporting CLIC on baremetal systems.
+
+#### 2.1 Startup Handling
+- [x] Update bootup code
+- [x] Modify linker scripts
+- [x] Create vector table setup functions
+- [x] Update system initialization functions
+
+#### 2.2 Configuration
+- [x] Define interrupt priority levels
+- [x] Configure interrupt modes (vectored/non-vectored)
+- [x] Setup privilege levels
+- [x] Configure preemption thresholds
+
+#### 2.3 Interrupt Handlers
+- [x] Create default interrupt handler
+- [x] Implement vectored interrupt handlers
+- [x] Setup interrupt entry/exit code
+- [x] Implement interrupt nesting support
+
+#### 2.4 Driver Development
+- [x] Create CLIC initialization function
+- [x] Implement interrupt enable/disable functions
+- [x] Implement interrupt priority setting functions
+- [x] Create vector table setup functions
+
+#### 2.5 Software Development Kit(SDK) update
+- [x] Add CLIC support to build system
+- [x] Add CLIC debugging support
+
+### Milestone 3 - Linux Software Modifications
+
+This milestone focuses on the necessary software changes needed for CLIC in Linux.
+
+#### 3.1 Linux Startup Code
+- [x] Initialize CLIC interrupts on RISC-V core booting Linux.
+- [x] Ensure proper initialization of interrupt vectors.
+- [x] Update the kernel boot parameters to recognize the new interrupt controller.
+
+#### 3.2 Linux Kernel Configuration
+- [ ] Update the device tree to include entries for the new interrupt controller.
+- [ ] Update kernel configuration options to include support for the new interrupt controller.
+
+#### 3.3 Linux Interrupt Controller Driver
+- [ ] Write Linux driver to interface with the new interrupt controller.
+- [ ] Add support for interrupt prioritization and preemption.
+- [ ] Ensure compatibility with existing Linux kernel interrupt handling mechanisms.
+    
+
+### Milestone 4 - Verification and Testing
+
+This milestone involves thorough verification and testing of the CLIC integration.
+
+#### 4.1 Compliance Testing
+- [ ] Verify RISC-V CLIC specification compliance
+- [ ] Test privilege level handling
+- [ ] Verify CSR functionality
+- [ ] Check timing requirements
+
+#### 4.2 System Validation
+- [ ] Validate system stability
+- [ ] Test corner cases
+- [ ] Verify error handling
+- [ ] Validate power modes
+
+#### 4.3 Performance Analysis
+- [ ] Measure interrupt latency
+- [ ] Analyze resource utilization
+- [ ] Profile interrupt handling
+- [ ] Document performance metrics
+
+File: 
+index.md
+Content: 
+# Litex SOC with Real Time Unit
+
+We use the Litex framework to demonstrate how to design Custom Functions to extending an FPGA-based RISC-V core in a way that it can fully support Real Time system requirements.
+
+![logo](./attachment/litex-soc.png)
+
+## Real Time extensions to Litex 
+
+A real-time processor core is a specialized microprocessor designed to handle real-time computing tasks where timing constraints are critical. These tasks require the processor to deliver results within a specified time frame, making them essential in systems where timely execution is crucial, such as in automotive control systems, industrial automation, medical devices, and telecommunications.
+
+Key characteristics of real-time processor cores include:
+
+- **Deterministic Performance** : Provide guarantees that tasks are completed within expected completion deadline.
+- **Prioritized Task Scheduling**: Enable Operating System's schheduler to limit long context switch times which reduce available task utilization and minimize viable task switching granularity needed to prioritize them.
+- **Low Latency in Interrupt Handling**: Minimize the amount of time elapsed from the source event that causes the preemption and the first instruction of the awakened task (known as interrupt latency).
+- **Reliable and Robust**: Designed to operate reliably without unexpected failures.
+
+Commercial vendors and IP providers offer such features as in-house solutions which are often proprietary and tightly coupled with the vendor’s instruction set architecture (ISA), target hardware family, and associated software stack. Examples of real-time processor cores include ARM Cortex-R series, Infineon AURIX TriCore, Texas Instruments’ C2000 series, and the Intel Atom processors with real-time extensions.
+
+## RISC-V processor for Real-Time Systems
+
+RISC-V ecosystem has been offering a modular, free, and open-source ISA and enables developing custom extensions. RISC-V community has been developing an extension to the Privileged specifications with the proposal of the RISC-V Core-Local Interrupt Controller (CLIC) to handle such real-time scenarios.
+
+### VexRiscv Core
+
+VexRiscv is a modular RISC-V core of adaptable pipeline depth with a plugin-based implementation. We propose to implement a new plugin to extend VexRiscv to support Real Time constraints to achieve best-in-class interrupt latency and fast context switching against commercial off-the-shelf (COTS) processor vendors, paving the road for RISC-V architectures in time-critical systems. 
+
+Detailed architecture can be found at [Architecture](Architecture).
+

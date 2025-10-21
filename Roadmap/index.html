@@ -1,0 +1,897 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-5.5.12">
+    
+    
+      
+        <title>Roadmap - Real Time Litex Extension</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.4dd2dd8d.min.css">
+      
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#roadmap" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href=".." title="Real Time Litex Extension" class="md-header-nav__button md-logo" aria-label="Real Time Litex Extension">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Real Time Litex Extension
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Roadmap
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+          
+
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href=".." class="md-tabs__link md-tabs__link--active">
+        Litex SOC with Real Time Unit
+      </a>
+    
+  </li>
+
+      
+        
+      
+        
+      
+        
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Real Time Litex Extension" class="md-nav__button md-logo" aria-label="Real Time Litex Extension">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Real Time Litex Extension
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Litex SOC with Real Time Unit" class="md-nav__link">
+      Litex SOC with Real Time Unit
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../Architecture/" title="Architecture" class="md-nav__link">
+      Architecture
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../Milestones/" title="Development Milestones" class="md-nav__link">
+      Development Milestones
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Roadmap
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" title="Roadmap" class="md-nav__link md-nav__link--active">
+      Roadmap
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#clic-support-in-risc-v-ecosystem" class="md-nav__link">
+    CLIC Support in RISC-V Ecosystem
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clic-support-in-vexriscv" class="md-nav__link">
+    CLIC Support in Vexriscv
+  </a>
+  
+    <nav class="md-nav" aria-label="CLIC Support in Vexriscv">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#milestone-1---hardware-modifications" class="md-nav__link">
+    Milestone 1 - Hardware Modifications
+  </a>
+  
+    <nav class="md-nav" aria-label="Milestone 1 - Hardware Modifications">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-top-level-integration-to-litex-soc" class="md-nav__link">
+    1.1 Top-Level Integration to Litex SOC
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-memory-map-implementation" class="md-nav__link">
+    1.2 Memory Map Implementation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-register-implementation" class="md-nav__link">
+    1.3 Register Implementation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-interrupt-logic" class="md-nav__link">
+    1.4 Interrupt Logic
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-vector-table" class="md-nav__link">
+    1.5 Vector Table
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#milestone-2---baremetal-software-modifications" class="md-nav__link">
+    Milestone 2 - Baremetal Software Modifications
+  </a>
+  
+    <nav class="md-nav" aria-label="Milestone 2 - Baremetal Software Modifications">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-startup-handling" class="md-nav__link">
+    2.1 Startup Handling
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-configuration" class="md-nav__link">
+    2.2 Configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-interrupt-handlers" class="md-nav__link">
+    2.3 Interrupt Handlers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-driver-development" class="md-nav__link">
+    2.4 Driver Development
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-software-development-kitsdk-update" class="md-nav__link">
+    2.5 Software Development Kit(SDK) update
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#milestone-3---linux-software-modifications" class="md-nav__link">
+    Milestone 3 - Linux Software Modifications
+  </a>
+  
+    <nav class="md-nav" aria-label="Milestone 3 - Linux Software Modifications">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-linux-startup-code" class="md-nav__link">
+    3.1 Linux Startup Code
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-linux-kernel-configuration" class="md-nav__link">
+    3.2 Linux Kernel Configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-linux-interrupt-controller-driver" class="md-nav__link">
+    3.3 Linux Interrupt Controller Driver
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#milestone-4---verification-and-testing" class="md-nav__link">
+    Milestone 4 - Verification and Testing
+  </a>
+  
+    <nav class="md-nav" aria-label="Milestone 4 - Verification and Testing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-compliance-testing" class="md-nav__link">
+    4.1 Compliance Testing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-system-validation" class="md-nav__link">
+    4.2 System Validation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-performance-analysis" class="md-nav__link">
+    4.3 Performance Analysis
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#clic-support-in-risc-v-ecosystem" class="md-nav__link">
+    CLIC Support in RISC-V Ecosystem
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clic-support-in-vexriscv" class="md-nav__link">
+    CLIC Support in Vexriscv
+  </a>
+  
+    <nav class="md-nav" aria-label="CLIC Support in Vexriscv">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#milestone-1---hardware-modifications" class="md-nav__link">
+    Milestone 1 - Hardware Modifications
+  </a>
+  
+    <nav class="md-nav" aria-label="Milestone 1 - Hardware Modifications">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-top-level-integration-to-litex-soc" class="md-nav__link">
+    1.1 Top-Level Integration to Litex SOC
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-memory-map-implementation" class="md-nav__link">
+    1.2 Memory Map Implementation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-register-implementation" class="md-nav__link">
+    1.3 Register Implementation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-interrupt-logic" class="md-nav__link">
+    1.4 Interrupt Logic
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-vector-table" class="md-nav__link">
+    1.5 Vector Table
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#milestone-2---baremetal-software-modifications" class="md-nav__link">
+    Milestone 2 - Baremetal Software Modifications
+  </a>
+  
+    <nav class="md-nav" aria-label="Milestone 2 - Baremetal Software Modifications">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-startup-handling" class="md-nav__link">
+    2.1 Startup Handling
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-configuration" class="md-nav__link">
+    2.2 Configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-interrupt-handlers" class="md-nav__link">
+    2.3 Interrupt Handlers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-driver-development" class="md-nav__link">
+    2.4 Driver Development
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-software-development-kitsdk-update" class="md-nav__link">
+    2.5 Software Development Kit(SDK) update
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#milestone-3---linux-software-modifications" class="md-nav__link">
+    Milestone 3 - Linux Software Modifications
+  </a>
+  
+    <nav class="md-nav" aria-label="Milestone 3 - Linux Software Modifications">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-linux-startup-code" class="md-nav__link">
+    3.1 Linux Startup Code
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-linux-kernel-configuration" class="md-nav__link">
+    3.2 Linux Kernel Configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-linux-interrupt-controller-driver" class="md-nav__link">
+    3.3 Linux Interrupt Controller Driver
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#milestone-4---verification-and-testing" class="md-nav__link">
+    Milestone 4 - Verification and Testing
+  </a>
+  
+    <nav class="md-nav" aria-label="Milestone 4 - Verification and Testing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-compliance-testing" class="md-nav__link">
+    4.1 Compliance Testing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-system-validation" class="md-nav__link">
+    4.2 System Validation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-performance-analysis" class="md-nav__link">
+    4.3 Performance Analysis
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                <h1 id="roadmap">Roadmap<a class="headerlink" href="#roadmap" title="Permanent link">#</a></h1>
+<h2 id="clic-support-in-risc-v-ecosystem">CLIC Support in RISC-V Ecosystem<a class="headerlink" href="#clic-support-in-risc-v-ecosystem" title="Permanent link">#</a></h2>
+<p>Adding an extension to the RISC-V architecture involves several steps, from defining the specification to implementing and testing the extension. Here's a high-level roadmap for the process:</p>
+<table>
+<thead>
+<tr>
+<th>Steps</th>
+<th>Status</th>
+<th>Remark</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Define the Extension Specification</td>
+<td>Already Implemented</td>
+<td><a href="https://github.com/riscv/riscv-fast-interrupt">Specification</a> by RISC-V Community.</td>
+</tr>
+<tr>
+<td>Proposal and Review</td>
+<td>Already Implemented</td>
+<td>CLIC ratification status ticket <a href="https://lf-riscv.atlassian.net/browse/RVS-1017">Jira</a>.</td>
+</tr>
+<tr>
+<td>Simulation Support</td>
+<td>Already Implemented</td>
+<td>Already supported by <a href="https://lf-riscv.atlassian.net/browse/RVS-2506">RISC-V ACT</a>.</td>
+</tr>
+<tr>
+<td>Emulator Support</td>
+<td>Already Implemented</td>
+<td>Initial patches in <a href="https://mail.gnu.org/archive/html/qemu-devel/2024-08/msg02791.html">QEMU</a>.</td>
+</tr>
+<tr>
+<td>Hardware Implementation</td>
+<td>Not Implemented</td>
+<td>No Vexriscv support. <a href="https://lf-riscv.atlassian.net/browse/RVS-2513">Commercial</a> &amp; <a href="https://github.com/pulp-platform/clic">Opensource</a> reference.</td>
+</tr>
+<tr>
+<td>Software Implementation</td>
+<td>Not Implemented</td>
+<td>No Vexriscv support. <a href="https://github.com/pulp-platform/pulp-freertos/blob/master/drivers/clic.c">Opensource</a> reference.</td>
+</tr>
+<tr>
+<td>Compliance and Testing</td>
+<td>Not Implemented</td>
+<td>No Vexriscv support. Reference <a href="https://github.com/pulp-platform/safety_island/tree/main/sw/tests/runtime_clic_basic">tests</a>.</td>
+</tr>
+<tr>
+<td>Documentation and Release</td>
+<td>Not Implemented</td>
+<td>No Vexriscv support.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="clic-support-in-vexriscv">CLIC Support in Vexriscv<a class="headerlink" href="#clic-support-in-vexriscv" title="Permanent link">#</a></h2>
+<h3 id="milestone-1---hardware-modifications">Milestone 1 - Hardware Modifications<a class="headerlink" href="#milestone-1---hardware-modifications" title="Permanent link">#</a></h3>
+<p>This milestone focuses on the hardware modifications needed for integrating the CLIC with the Vexriscv core.</p>
+<h4 id="11-top-level-integration-to-litex-soc">1.1 Top-Level Integration to Litex SOC<a class="headerlink" href="#11-top-level-integration-to-litex-soc" title="Permanent link">#</a></h4>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled checked/> Create CLIC module instance in SoC top-level</li>
+<li class="task-list-item"><input type="checkbox" disabled checked/> Connect clock and reset signals</li>
+<li class="task-list-item"><input type="checkbox" disabled checked/> Define and connect interrupt input signals from peripherals</li>
+<li class="task-list-item"><input type="checkbox" disabled checked/> Connect Vexriscv-to-CLIC configuration interface</li>
+</ul>
+<h4 id="12-memory-map-implementation">1.2 Memory Map Implementation<a class="headerlink" href="#12-memory-map-implementation" title="Permanent link">#</a></h4>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled checked/> Define CLIC memory map (base address and regions)</li>
+<li class="task-list-item"><input type="checkbox" disabled checked/> Implement address decoder for CLIC registers</li>
+<li class="task-list-item"><input type="checkbox" disabled checked/> Connect to system bus (TileLink/AHB/AXI)</li>
+<li class="task-list-item"><input type="checkbox" disabled checked/> Map CLIC vector table in memory</li>
+</ul>
+<h4 id="13-register-implementation">1.3 Register Implementation<a class="headerlink" href="#13-register-implementation" title="Permanent link">#</a></h4>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled checked/> Implement CLIC control registers</li>
+<li class="task-list-item"><input type="checkbox" disabled checked/> Implement per-interrupt configuration registers</li>
+<li class="task-list-item"><input type="checkbox" disabled checked/> Implement interrupt pending/enable registers</li>
+<li class="task-list-item"><input type="checkbox" disabled checked/> Implement level/priority registers</li>
+</ul>
+<h4 id="14-interrupt-logic">1.4 Interrupt Logic<a class="headerlink" href="#14-interrupt-logic" title="Permanent link">#</a></h4>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled checked/> Implement interrupt priority resolution</li>
+<li class="task-list-item"><input type="checkbox" disabled checked/> Implement level-based preemption logic</li>
+<li class="task-list-item"><input type="checkbox" disabled checked/> Implement selective hardware vectoring</li>
+<li class="task-list-item"><input type="checkbox" disabled checked/> Implement interrupt completion logic</li>
+</ul>
+<h4 id="15-vector-table">1.5 Vector Table<a class="headerlink" href="#15-vector-table" title="Permanent link">#</a></h4>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled checked/> Implement vector table storage</li>
+<li class="task-list-item"><input type="checkbox" disabled checked/> Implement vector table lookup logic</li>
+<li class="task-list-item"><input type="checkbox" disabled checked/> Connect vector addresses to Vexriscv core</li>
+</ul>
+<h3 id="milestone-2---baremetal-software-modifications">Milestone 2 - Baremetal Software Modifications<a class="headerlink" href="#milestone-2---baremetal-software-modifications" title="Permanent link">#</a></h3>
+<p>This milestone addresses the necessary software changes for supporting CLIC on baremetal systems.</p>
+<h4 id="21-startup-handling">2.1 Startup Handling<a class="headerlink" href="#21-startup-handling" title="Permanent link">#</a></h4>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled checked/> Update bootup code</li>
+<li class="task-list-item"><input type="checkbox" disabled checked/> Modify linker scripts</li>
+<li class="task-list-item"><input type="checkbox" disabled checked/> Create vector table setup functions</li>
+<li class="task-list-item"><input type="checkbox" disabled checked/> Update system initialization functions</li>
+</ul>
+<h4 id="22-configuration">2.2 Configuration<a class="headerlink" href="#22-configuration" title="Permanent link">#</a></h4>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled checked/> Define interrupt priority levels</li>
+<li class="task-list-item"><input type="checkbox" disabled checked/> Configure interrupt modes (vectored/non-vectored)</li>
+<li class="task-list-item"><input type="checkbox" disabled checked/> Setup privilege levels</li>
+<li class="task-list-item"><input type="checkbox" disabled checked/> Configure preemption thresholds</li>
+</ul>
+<h4 id="23-interrupt-handlers">2.3 Interrupt Handlers<a class="headerlink" href="#23-interrupt-handlers" title="Permanent link">#</a></h4>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled checked/> Create default interrupt handler</li>
+<li class="task-list-item"><input type="checkbox" disabled checked/> Implement vectored interrupt handlers</li>
+<li class="task-list-item"><input type="checkbox" disabled checked/> Setup interrupt entry/exit code</li>
+<li class="task-list-item"><input type="checkbox" disabled checked/> Implement interrupt nesting support</li>
+</ul>
+<h4 id="24-driver-development">2.4 Driver Development<a class="headerlink" href="#24-driver-development" title="Permanent link">#</a></h4>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled checked/> Create CLIC initialization function</li>
+<li class="task-list-item"><input type="checkbox" disabled checked/> Implement interrupt enable/disable functions</li>
+<li class="task-list-item"><input type="checkbox" disabled checked/> Implement interrupt priority setting functions</li>
+<li class="task-list-item"><input type="checkbox" disabled checked/> Create vector table setup functions</li>
+</ul>
+<h4 id="25-software-development-kitsdk-update">2.5 Software Development Kit(SDK) update<a class="headerlink" href="#25-software-development-kitsdk-update" title="Permanent link">#</a></h4>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled checked/> Add CLIC support to build system</li>
+<li class="task-list-item"><input type="checkbox" disabled checked/> Add CLIC debugging support</li>
+</ul>
+<h3 id="milestone-3---linux-software-modifications">Milestone 3 - Linux Software Modifications<a class="headerlink" href="#milestone-3---linux-software-modifications" title="Permanent link">#</a></h3>
+<p>This milestone focuses on the necessary software changes needed for CLIC in Linux.</p>
+<h4 id="31-linux-startup-code">3.1 Linux Startup Code<a class="headerlink" href="#31-linux-startup-code" title="Permanent link">#</a></h4>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled checked/> Initialize CLIC interrupts on RISC-V core booting Linux.</li>
+<li class="task-list-item"><input type="checkbox" disabled checked/> Ensure proper initialization of interrupt vectors.</li>
+<li class="task-list-item"><input type="checkbox" disabled checked/> Update the Litex boot parameters to recognize the new interrupt controller.</li>
+</ul>
+<h4 id="32-linux-kernel-configuration">3.2 Linux Kernel Configuration<a class="headerlink" href="#32-linux-kernel-configuration" title="Permanent link">#</a></h4>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> Update the device tree to include entries for the new interrupt controller.</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Update kernel configuration options to include support for the new interrupt controller.</li>
+</ul>
+<h4 id="33-linux-interrupt-controller-driver">3.3 Linux Interrupt Controller Driver<a class="headerlink" href="#33-linux-interrupt-controller-driver" title="Permanent link">#</a></h4>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> Write Linux driver to interface with the new interrupt controller.</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Add support for interrupt prioritization and preemption.</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Ensure compatibility with existing Linux kernel interrupt handling mechanisms.</li>
+</ul>
+<h3 id="milestone-4---verification-and-testing">Milestone 4 - Verification and Testing<a class="headerlink" href="#milestone-4---verification-and-testing" title="Permanent link">#</a></h3>
+<p>This milestone involves thorough verification and testing of the CLIC integration.</p>
+<h4 id="41-compliance-testing">4.1 Compliance Testing<a class="headerlink" href="#41-compliance-testing" title="Permanent link">#</a></h4>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> Verify RISC-V CLIC specification compliance</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Test privilege level handling</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Verify CSR functionality</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Check timing requirements</li>
+</ul>
+<h4 id="42-system-validation">4.2 System Validation<a class="headerlink" href="#42-system-validation" title="Permanent link">#</a></h4>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> Validate system stability</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Test corner cases</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Verify error handling</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Validate power modes</li>
+</ul>
+<h4 id="43-performance-analysis">4.3 Performance Analysis<a class="headerlink" href="#43-performance-analysis" title="Permanent link">#</a></h4>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> Measure interrupt latency</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Analyze resource utilization</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Profile interrupt handling</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Document performance metrics</li>
+</ul>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../Milestones/" title="Development Milestones" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Development Milestones
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/vendor.3636a4ec.min.js"></script>
+      <script src="../assets/javascripts/bundle.e9fe3281.min.js"></script><script id="__lang" type="application/json">{"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: ["navigation.expand", "tabs"],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.5eca75d3.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

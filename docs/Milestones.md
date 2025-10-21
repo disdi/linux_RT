@@ -19,9 +19,9 @@ For full documentation and milestones, see the [Project Blog](https://saketsinha
 | d. CLIC driver development | 100% |
 | e. CLIC Software Development Kit(SDK) update | 100% |
 | **3. Linux Software Modifications** | |
-| a. Linux kernel configuration for CLIC | 0% |
-| b. Linux kernel interrupt Controller Driver for CLIC | 0% |
-| c. Linux Startup Code handling for CLIC | 0% |
+| a. Linux Startup Code handling for CLIC | 100% |
+| b. Linux kernel configuration for CLIC | 0% |
+| c. Linux kernel interrupt Controller Driver for CLIC | 0% |
 | **4. Verification and Testing** | |
 | a. Verify RISC-V CLIC specification compliance with associated test. Targeting compliance of 75% initially. | 0% |
 | b. Validate Litex system stability after CLIC integration | 0% |

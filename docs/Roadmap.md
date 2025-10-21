@@ -28,33 +28,33 @@ Adding an extension to the RISC-V architecture involves several steps, from defi
 This milestone focuses on the hardware modifications needed for integrating the CLIC with the Vexriscv core.
 
 #### 1.1 Top-Level Integration to Litex SOC
-- [ ] Create CLIC module instance in SoC top-level
-- [ ] Connect clock and reset signals
-- [ ] Define and connect interrupt input signals from peripherals
-- [ ] Connect Vexriscv-to-CLIC configuration interface
+- [x] Create CLIC module instance in SoC top-level
+- [x] Connect clock and reset signals
+- [x] Define and connect interrupt input signals from peripherals
+- [x] Connect Vexriscv-to-CLIC configuration interface
 
 #### 1.2 Memory Map Implementation
-- [ ] Define CLIC memory map (base address and regions)
-- [ ] Implement address decoder for CLIC registers
-- [ ] Connect to system bus (TileLink/AHB/AXI)
-- [ ] Map CLIC vector table in memory
+- [x] Define CLIC memory map (base address and regions)
+- [x] Implement address decoder for CLIC registers
+- [x] Connect to system bus (TileLink/AHB/AXI)
+- [x] Map CLIC vector table in memory
 
 #### 1.3 Register Implementation
-- [ ] Implement CLIC control registers
-- [ ] Implement per-interrupt configuration registers
-- [ ] Implement interrupt pending/enable registers
-- [ ] Implement level/priority registers
+- [x] Implement CLIC control registers
+- [x] Implement per-interrupt configuration registers
+- [x] Implement interrupt pending/enable registers
+- [x] Implement level/priority registers
 
 #### 1.4 Interrupt Logic
-- [ ] Implement interrupt priority resolution
-- [ ] Implement level-based preemption logic
-- [ ] Implement selective hardware vectoring
-- [ ] Implement interrupt completion logic
+- [x] Implement interrupt priority resolution
+- [x] Implement level-based preemption logic
+- [x] Implement selective hardware vectoring
+- [x] Implement interrupt completion logic
 
 #### 1.5 Vector Table
-- [ ] Implement vector table storage
-- [ ] Implement vector table lookup logic
-- [ ] Connect vector addresses to Vexriscv core
+- [x] Implement vector table storage
+- [x] Implement vector table lookup logic
+- [x] Connect vector addresses to Vexriscv core
 
 
 ### Milestone 2 - Baremetal Software Modifications
@@ -62,50 +62,51 @@ This milestone focuses on the hardware modifications needed for integrating the 
 This milestone addresses the necessary software changes for supporting CLIC on baremetal systems.
 
 #### 2.1 Startup Handling
-- [ ] Update bootup code
-- [ ] Modify linker scripts
-- [ ] Create vector table setup functions
-- [ ] Update system initialization functions
+- [x] Update bootup code
+- [x] Modify linker scripts
+- [x] Create vector table setup functions
+- [x] Update system initialization functions
 
 #### 2.2 Configuration
-- [ ] Define interrupt priority levels
-- [ ] Configure interrupt modes (vectored/non-vectored)
-- [ ] Setup privilege levels
-- [ ] Configure preemption thresholds
+- [x] Define interrupt priority levels
+- [x] Configure interrupt modes (vectored/non-vectored)
+- [x] Setup privilege levels
+- [x] Configure preemption thresholds
 
 #### 2.3 Interrupt Handlers
-- [ ] Create default interrupt handler
-- [ ] Implement vectored interrupt handlers
-- [ ] Setup interrupt entry/exit code
-- [ ] Implement interrupt nesting support
+- [x] Create default interrupt handler
+- [x] Implement vectored interrupt handlers
+- [x] Setup interrupt entry/exit code
+- [x] Implement interrupt nesting support
 
 #### 2.4 Driver Development
-- [ ] Create CLIC initialization function
-- [ ] Implement interrupt enable/disable functions
-- [ ] Implement interrupt priority setting functions
-- [ ] Create vector table setup functions
+- [x] Create CLIC initialization function
+- [x] Implement interrupt enable/disable functions
+- [x] Implement interrupt priority setting functions
+- [x] Create vector table setup functions
 
 #### 2.5 Software Development Kit(SDK) update
-- [ ] Add CLIC support to build system
-- [ ] Add CLIC debugging support
+- [x] Add CLIC support to build system
+- [x] Add CLIC debugging support
 
 ### Milestone 3 - Linux Software Modifications
 
 This milestone focuses on the necessary software changes needed for CLIC in Linux.
 
-#### 3.1 Linux Kernel Configuration
+#### 3.1 Linux Startup Code
+- [x] Initialize CLIC interrupts on RISC-V core booting Linux.
+- [x] Ensure proper initialization of interrupt vectors.
+- [x] Update the Litex boot parameters to recognize the new interrupt controller.
+
+#### 3.2 Linux Kernel Configuration
 - [ ] Update the device tree to include entries for the new interrupt controller.
 - [ ] Update kernel configuration options to include support for the new interrupt controller.
 
-#### 3.2 Linux Interrupt Controller Driver
+#### 3.3 Linux Interrupt Controller Driver
 - [ ] Write Linux driver to interface with the new interrupt controller.
 - [ ] Add support for interrupt prioritization and preemption.
 - [ ] Ensure compatibility with existing Linux kernel interrupt handling mechanisms.
     
-#### 3.3 Linux Startup Code
-- [ ] Initialize CLIC interrupts on RISC-V core booting Linux.
-- [ ] Ensure proper initialization of interrupt vectors.
-- [ ] Update the kernel boot parameters to recognize the new interrupt controller.
 
 ### Milestone 4 - Verification and Testing
 

@@ -99,8 +99,8 @@ This milestone focuses on the necessary software changes needed for CLIC in Linu
 - [x] Update the Litex boot parameters to recognize the new interrupt controller.
 
 #### 3.2 Linux Kernel Configuration
-- [ ] Update the device tree to include entries for the new interrupt controller.
-- [ ] Update kernel configuration options to include support for the new interrupt controller.
+- [x] Update the device tree to include entries for the new interrupt controller.
+- [x] Update kernel configuration options to include support for the new interrupt controller.
 
 #### 3.3 Linux Interrupt Controller Driver
 - [ ] Write Linux driver to interface with the new interrupt controller.

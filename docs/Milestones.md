@@ -20,7 +20,7 @@ For full documentation and milestones, see the [Project Blog](https://saketsinha
 | e. CLIC Software Development Kit(SDK) update | 100% |
 | **3. Linux Software Modifications** | |
 | a. Linux Startup Code handling for CLIC | 100% |
-| b. Linux kernel configuration for CLIC | 0% |
+| b. Linux kernel configuration for CLIC | 100% |
 | c. Linux kernel interrupt Controller Driver for CLIC | 0% |
 | **4. Verification and Testing** | |
 | a. Verify RISC-V CLIC specification compliance with associated test. Targeting compliance of 75% initially. | 0% |

@@ -25,4 +25,4 @@ RISC-V ecosystem has been offering a modular, free, and open-source ISA and enab
 
 VexRiscv is a modular RISC-V core of adaptable pipeline depth with a plugin-based implementation. We propose to implement a new plugin to extend VexRiscv to support Real Time constraints to achieve best-in-class interrupt latency and fast context switching against commercial off-the-shelf (COTS) processor vendors, paving the road for RISC-V architectures in time-critical systems. 
 
-Detailed architecture can be found at [Architecture](Architecture).
+Detailed architecture can be found at [Architecture](Architecture.md).

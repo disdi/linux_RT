@@ -113,19 +113,19 @@ This milestone focuses on the necessary software changes needed for CLIC in Linu
 This milestone involves thorough verification and testing of the CLIC integration.
 
 #### 4.1 Compliance Testing
-- [ ] Verify RISC-V CLIC specification compliance
-- [ ] Test privilege level handling
-- [ ] Verify CSR functionality
-- [ ] Check timing requirements
+- [x] Verify RISC-V CLIC specification compliance
+- [x] Test privilege level handling
+- [x] Verify CSR functionality
+- [x] Check timing requirements
 
 #### 4.2 System Validation
-- [ ] Validate system stability
-- [ ] Test corner cases
-- [ ] Verify error handling
-- [ ] Validate power modes
+- [x] Validate system stability
+- [x] Test corner cases
+- [x] Verify error handling
+- [x] Validate power modes
 
 #### 4.3 Performance Analysis
-- [ ] Measure interrupt latency
-- [ ] Analyze resource utilization
-- [ ] Profile interrupt handling
-- [ ] Document performance metrics
+- [x] Measure interrupt latency
+- [x] Analyze resource utilization
+- [x] Profile interrupt handling
+- [x] Document performance metrics

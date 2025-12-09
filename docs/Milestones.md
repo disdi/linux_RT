@@ -23,7 +23,7 @@ For full documentation and milestones, see the [Project Blog](https://saketsinha
 | b. Linux kernel configuration for CLIC | 100% |
 | c. Linux kernel interrupt Controller Driver for CLIC | 0% |
 | **4. Verification and Testing** | |
-| a. Verify RISC-V CLIC specification compliance with associated test. Targeting compliance of 75% initially. | 0% |
-| b. Validate Litex system stability after CLIC integration | 0% |
-| c. Litex Performance Analysis after CLIC integration | 0% |
-| d. Documentation about CLIC integration and usage | 0% |
+| a. Verify RISC-V CLIC specification compliance with associated test. Targeting compliance of 75% initially. | 100% |
+| b. Validate Litex system stability after CLIC integration | 100% |
+| c. Litex Performance Analysis after CLIC integration | 100% |
+| d. Documentation about CLIC integration and usage | 100% |
